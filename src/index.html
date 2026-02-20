@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPN UML</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 0 0px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.4);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 0 0px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.kp-animation {
+  animation: floatGlow 4s ease-in-out infinite;
+  transition: transform 0.5s ease;
+}
+
+.kp-animation:hover {
+  transform: scale(1.05);
+}
+</style>
+
+</head>
+
+<body class="min-h-screen bg-gray-50 scroll-smooth" style="font-family: 'Roboto Serif', serif;">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md w-full sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+
+      <div class="text-2xl md:text-3xl text-red-800 font-bold flex items-center gap-4">
+        <img src="unnamed.webp" class="h-12">
+        <h1>केपी ओली<span class="text-orange-700"> किन?</span></h1>
+      </div>
+
+      <div class="hidden md:flex space-x-8 text-lg">
+        <a href="#" class="hover:text-red-700 font-semibold">Home</a>
+        <a href="#projects" class="hover:text-red-700">Achievements</a>
+        <a href="#development" class="hover:text-red-700">Development</a>
+        <a href="#about" class="hover:text-red-700">About</a>
+      </div>
+
+      <div class="hidden md:flex space-x-3">
+        <a href="https://public-survey-jhapa.netlify.app/"><button class="px-4 py-2 bg-red-900 text-white rounded-md hover:bg-red-700">Feedbacks here..</button>
+   </a>
+    <!-- <a href="https://public-survey-jhapa.netlify.app/">        <button class="px-4 py-2 bg-red-900 text-white rounded-md hover:bg-red-700">Signup</button> -->
+      </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl"> ☰ </button>
+
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-md transition-all duration-300">
+    <div class="flex flex-col space-y-4 p-6 text-lg">
+
+    <a href="#" class="hover:text-red-700">Home</a>
+    <a href="#projects" class="hover:text-red-700">Achievements</a>
+    <a href="#development" class="hover:text-red-700">Development</a>
+    <a href="#about" class="hover:text-red-700">About</a>
+
+    <a href="https://public-survey-jhapa.netlify.app/"
+       class="mt-4 px-4 py-2 bg-red-900 text-white rounded-md text-center hover:bg-red-700">
+       Any Feedbacks?
+    </a>
+
+  </div>
+</div>
+
+  <!-- HERO SECTION -->
+  <section class="bg-gray-100 min-h-screen flex flex-col items-center justify-center text-center px-6">
+    
+    <h1 class="text-red-900 md:text-7xl text-4xl font-extrabold leading-tight">
+      Vote For KP Sharma Oli
+    </h1>
+
+    <p class="text-gray-700 md:text-2xl text-lg mt-6 max-w-3xl">
+      Committed to national sovereignty, economic prosperity, strong diplomacy,
+      rapid infrastructure development, and a self-reliant Nepal for future generations.
+    </p>
+
+    <a href="#projects"
+       class="mt-8 px-8 py-4 bg-red-700 text-white rounded-lg text-xl hover:bg-red-800 transition inline-block">
+       View Achievements
+    </a>
+
+  </section>
+
+  <!-- CARD SECTION -->
+  <section id="projects" class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold text-red-900">Major Achievements</h2>
+      <p class="text-gray-600 mt-4">Key infrastructure and development milestones</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      <!-- Card 1 -->
+       <a href="https://risingnepaldaily.com/news/65337"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="Viewtower.jpg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">View Tower</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Built between 2076–2080, symbolizing development and a stronger future.
+          </p>
+        </div>
+      </div></a>
+      
+
+      <!-- Card 2 -->
+       <a href="https://mofa.gov.np/content/1631/opening-remarks-by-rt-hon-mr-k-p-sharma-oli/"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="Relation.jpeg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Global Diplomacy</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Strengthening international partnerships to enhance Nepal’s global presence.
+          </p>
+        </div>
+      </div></a>
+      
+
+      <!-- Card 3 -->
+       <a href="https://kathmandupost.com/national/2026/02/12/80-7-billion-cubic-metres-of-natural-gas-confirmed-in-dailekh"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="Dhailekh-gas (1).gif" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Dailekh Gas Project</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Unlocking domestic energy resources for national energy security.
+          </p>
+        </div>
+      </div></a>
+      
+
+      <!-- Card 4 -->
+       <a href="https://ejatlas.org/print/kathmandu-terai-madhesh-fast-track-road-project-nepal"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="fast-track-druta-marga-tunnel-highway-kathmandu-nijgadh-tarai_gMhUE6ipIz.jpg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Fast Track Project</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Accelerating connectivity through modern infrastructure corridors.
+          </p>
+        </div>
+      </div></a>
+      
+      
+
+      <!-- card 5 -->
+       <a href="https://kathmandupost.com/national/2020/05/20/government-unveils-new-political-map-including-kalapani-lipulekh-and-limpiyadhura-inside-nepal-borders"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="updated map.jpeg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Issuance of New Political Map</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Reaffirming Nepal’s territorial integrity and national sovereignty through historic cartographic reform
+          </p>
+        </div>
+      </div></a>
+
+      <!-- card 6 -->
+      <a href="https://bgjcl.com/pages/about-the-project"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="budhigandaki.jpg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Budhi Gandaki Hydropower Project</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Advancing Nepal’s energy security through large-scale hydropower development for a self-reliant future.
+          </p>
+        </div>
+      </div></a>
+      
+      <!-- card 7 -->
+       <a href="https://kathmandupost.com/national/2025/08/26/nagdhunga-sisnekhola-tunnel-to-open-from-january-2026-authorities-say"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="Nagdhunga tunnel.jpeg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">Nagdhunga Tunnel Construction</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Transforming national connectivity by reducing travel time and easing congestion at the Kathmandu entry point.
+          </p>
+        </div>
+      </div></a>
+      
+      <!-- card 8 -->
+       <a href="https://thehimalayantimes.com/nepal/pm-oli-inspects-under-construction-tu-cricket-ground"><div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <img src="tu-cricket-ground-cover_qowutdczsn.jpg" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-bold text-red-900">TU Cricket Ground</h2>
+          <p class="text-gray-600 mt-2 text-sm">
+            Upgrading national sports infrastructure to promote cricket excellence and international standards
+          </p>
+        </div>
+      </div></a>
+      
+
+    </div>
+  </section>
+
+  <section id="development" class="py-24 bg-gray-100 text-center">
+  <h2 class="text-4xl md:text-5xl font-extrabold text-red-900">
+    विकासका मुख्य उपलब्धिहरू
+  </h2>
+  <p class="text-gray-600 mt-6 text-lg max-w-3xl mx-auto">
+    आर्थिक वृद्धि, सामाजिक रूपान्तरण, पूर्वाधार विस्तार र राष्ट्रिय गौरवका
+    आयोजनामार्फत आधुनिक नेपाल निर्माण।
+  </p>
+</section>
+
+
+  <!-- 1. SOCIAL TRANSFORMATION SECTION -->
+<section id="social-transformation" class="py-20 px-6 bg-gray-100">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div>
+      <img src="imgg1.png"
+           alt="Social Development"
+           class="w-full rounded-xl">
+    </div>
+
+    <!-- RIGHT SIDE TEXT -->
+    <div>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-red-900 mb-6">
+        समावेशी विकास र सामाजिक रूपान्तरण
+      </h2>
+
+      <p class="text-gray-700 text-lg leading-relaxed mb-8">
+        सुरक्षित आवास, शिक्षा, स्वास्थ्य, महिला सशक्तिकरण र सामाजिक न्यायको क्षेत्रमा
+        ऐतिहासिक उपलब्धि हासिल गर्दै मानव विकास सूचकांकमा उल्लेखनीय सुधार गरिएको छ।
+        समृद्ध, समावेशी र आत्मनिर्भर नेपालको आधार निर्माण गरिएको छ।
+      </p>
+
+      <!-- TICK POINTS -->
+      <ul class="space-y-5 text-gray-800 text-lg">
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          सुरक्षित आवास कार्यक्रममार्फत लाखौं नागरिकलाई घर निर्माण सहयोग।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          शिक्षा क्षेत्रमा पहुँच विस्तार र साक्षरतामा उल्लेखनीय वृद्धि।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          स्वास्थ्य सेवा र स्वास्थ्य बीमा कार्यक्रमको विस्तार।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          महिला सहभागिता र नेतृत्वमा उल्लेखनीय वृद्धि।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          प्रत्येक नेपालीको बैंक खाता अभियानमार्फत वित्तीय समावेशीकरण।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          मानव विकास सूचकांक (HDI) मा निरन्तर सुधार।
+        </li>
+
+      </ul>
+
+      <p class="mt-10 text-xl font-semibold text-red-900">
+        “समृद्ध नेपाल, सुखी नेपाली” को लक्ष्यतर्फ दृढ कदम।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 2. NATIONAL PROJECTS & DIGITAL NEPAL SECTION -->
+<section id="national-projects" class="py-20 px-6 bg-gray-100">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT SIDE image -->
+     <div>
+      <img src="imgg2.png"
+           alt="National Projects and Digital Nepal"
+           class="w-full rounded-xl">
+    </div>
+
+      <!-- RIGHT SIDE text -->
+
+    <div>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-red-900 mb-6">
+        राष्ट्रिय गौरवका आयोजना र डिजिटल रूपान्तरण
+      </h2>
+
+      <p class="text-gray-700 text-lg leading-relaxed mb-8">
+        ऊर्जा, पूर्वाधार, संघीय संरचना र डिजिटल सेवामा ऐतिहासिक सुधार गर्दै
+        आधुनिक र आत्मनिर्भर राष्ट्र निर्माणको आधार तयार गरिएको छ।
+      </p>
+
+      <ul class="space-y-5 text-gray-800 text-lg">
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          लोडसेडिङ अन्त्य गरी देशलाई उज्यालो बनाइएको।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          अन्तर्राष्ट्रिय विमानस्थल निर्माण तथा स्तरोन्नति।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          संघीय संसद भवन तथा संरचनाहरूको निर्माण।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          ७७ जिल्लामा 4G सेवा विस्तार।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          “नागरिक एप” मार्फत डिजिटल सेवा पहुँच।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          स्वास्थ्य बीमा कार्यक्रमको देशव्यापी विस्तार।
+        </li>
+
+      </ul>
+
+      <p class="mt-10 text-xl font-semibold text-red-900">
+        आधुनिक नेपाल निर्माणको दिशामा दृढ संकल्प।
+      </p>
+
+    </div>
+
+    
+    
+
+  </div>
+
+</section>
+
+
+<!-- 3rd section  -->
+ <!-- ECONOMIC & INFRASTRUCTURE PROGRESS SECTION -->
+<section id="economic-progress" class="py-20 px-6 bg-white">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div>
+      <img src="imgg3.png"
+           alt="Economic Progress"
+           class="w-full rounded-xl">
+    </div>
+
+    <!-- RIGHT SIDE TEXT -->
+    <div>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-red-900 mb-6">
+        आर्थिक र पूर्वाधार क्षेत्रमा ऐतिहासिक प्रगति
+      </h2>
+
+      <p class="text-gray-700 text-lg leading-relaxed mb-8">
+        गरिबी न्यूनीकरणदेखि सडक, हवाई, सञ्चार र ऊर्जा क्षेत्रमा व्यापक विस्तार गर्दै
+        देशलाई आधुनिक विकासको मार्गमा अघि बढाइएको छ।
+      </p>
+
+      <ul class="space-y-5 text-gray-800 text-lg">
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          लाखौं नागरिक गरिबी रेखामाथि उकासिएका।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          गोरेटो बाटोदेखि राजमार्गसम्म सडक सञ्जाल विस्तार।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          अन्तर्राष्ट्रिय विमानस्थल निर्माण र हवाई सेवा विस्तार।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          टेलिफोन पहुँचमा ऐतिहासिक वृद्धि।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          इन्टरनेट सेवा देशभर विस्तार।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          लोडसेडिङ अन्त्य गर्दै देशलाई उज्यालो बनाइएको।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          कृषि, पर्यटन र उत्पादन क्षेत्रमा उल्लेखनीय वृद्धि।
+        </li>
+
+      </ul>
+
+      <p class="mt-10 text-xl font-semibold text-red-900">
+        आत्मनिर्भर र समृद्ध नेपालको दिशामा दृढ कदम।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ECONOMIC GROWTH & RECONSTRUCTION SECTION -->
+<section id="economic-reconstruction" class="py-20 px-6 bg-white">
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div>
+      <img src="img4.png"
+           alt="Economic Growth and Reconstruction"
+           class="w-full rounded-xl">
+    </div>
+
+    <!-- RIGHT SIDE TEXT -->
+    <div>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-red-900 mb-6">
+        आर्थिक वृद्धि, पुनर्निर्माण र पूर्वाधार क्रान्ति
+      </h2>
+
+      <p class="text-gray-700 text-lg leading-relaxed mb-8">
+        भूकम्पपछिको पुनर्निर्माणदेखि तीव्र आर्थिक वृद्धि र आधुनिक पूर्वाधार निर्माणसम्म
+        देशलाई विकासको नयाँ उचाइमा पुर्‍याउने ऐतिहासिक पहलहरू सम्पन्न गरिएका छन्।
+      </p>
+
+      <ul class="space-y-5 text-gray-800 text-lg">
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          आर्थिक वृद्धि दर ७.५% सम्म पुर्‍याइएको।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          २० लाखभन्दा बढी नेपाली गरिबीबाट माथि उकासिएका।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          ८ लाखभन्दा बढी निजी आवास पुनर्निर्माण सम्पन्न।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          हजारौं विद्यालय र स्वास्थ्य संस्थाको पुनर्निर्माण।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          दैनिक औसत ५ कि.मि. सडक कालोपत्रे।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          दक्षिण एशियाकै पहिलो अन्तर्राष्ट्रिय पेट्रोलियम पाइपलाइन सञ्चालन।
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-600 font-bold text-xl mr-3">✔</span>
+          आधुनिक रेल र सुरुङ मार्ग निर्माणको सुरुवात।
+        </li>
+
+      </ul>
+
+      <p class="mt-10 text-xl font-semibold text-red-900">
+        विकासको गति, समृद्धिको दिशा।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+  <!-- ABOUT SECTION -->
+  <section id="about"
+           class="w-full flex flex-col md:flex-row items-center p-10 
+           bg-gradient-to-r from-red-900 via-red-700 to-orange-600 text-white">
+
+    <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+      <img src="kp oli photo.png"
+     class="rounded-2xl h-80 md:h-[500px] shadow-2xl kp-animation">
+
+    </div>
+
+    <div class="md:w-1/2 md:pl-12 text-center md:text-left">
+
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6">
+        पार्टीलाई नेतृत्वदायी–शक्ति बनाउने सङ्कल्प गरौं |
+      </h2>
+
+      <p class="text-white/90 text-lg leading-relaxed">
+        लोकतन्त्रमा दलहरू निश्चित दर्शन, सिद्धान्त र उद्देश्यमा आधारित हुन्छन्।
+        राष्ट्रिय हित, स्थायित्व, आर्थिक समृद्धि र आत्मनिर्भर नेपाल निर्माण हाम्रो
+        प्रतिबद्धता हो। विकास, सुशासन र जनताको विश्वासलाई केन्द्रमा राखेर
+        देशलाई समुन्नत भविष्यतर्फ अघि बढाउनु हाम्रो लक्ष्य हो।
+      </p>
+
+      <div class="mt-8">
+
+  <!-- Hidden Extra Text -->
+  <div id="moreText" class="hidden mt-6 text-white/90 text-lg leading-relaxed">
+    <p class="mb-4">
+      नेपाललाई स्थायित्व, सुशासन र तीव्र विकासको मार्गमा अघि बढाउने स्पष्ट दृष्टिकोणका साथ
+      पूर्वाधार निर्माण, ऊर्जा आत्मनिर्भरता, डिजिटल रूपान्तरण र सामाजिक सुरक्षामा ऐतिहासिक
+      पहलहरू गरिएको छ।
+    </p>
+
+    <p class="mb-4">
+      कर्मचारी तलब वृद्धि, सामाजिक सुरक्षा भत्ता विस्तार, राष्ट्रिय गौरवका आयोजना,
+      अन्तर्राष्ट्रिय सम्बन्ध सुदृढीकरण र युवालाई अवसर सिर्जना गर्दै
+      “समृद्ध नेपाल, सुखी नेपाली” को लक्ष्यतर्फ दृढ कदम चालिएको छ।
+    </p>
+
+    <p>
+      आत्मनिर्भर अर्थतन्त्र, बलियो राष्ट्रियता र जनताको विश्वास नै हाम्रो सबैभन्दा ठूलो शक्ति हो।
+    </p>
+  </div>
+
+  <!-- Toggle Button -->
+  <button onclick="toggleText()"
+          class="px-6 py-3 bg-white text-red-900 font-semibold rounded-md hover:bg-gray-200 transition">
+    Learn More
+  </button>
+
+</div>
+
+
+    </div>
+  </section>
+
+  
+  <!-- ================= NEWS SECTION ================= -->
+<section id="news" class="py-20 px-6 bg-gray-100">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-red-900">Latest News</h2>
+      <p class="text-gray-600 mt-4">Official Updates & Announcements</p>
+    </div>
+
+    <!-- News Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- ===== NEWS CARD 1 ===== -->
+      <a href="https://www.cpnuml.org/news/3847" target="_blank"
+         class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+        <img src="news1.jpg"
+             class="w-full h-52 object-cover">
+
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">February 20, 2026</p>
+
+          <h3 class="text-xl font-bold text-red-900 mb-3">
+            निर्वाचन घोषणापत्र सार्वजनिक
+          </h3>
+
+          <p class="text-gray-600 text-sm">
+            ७ फागुन (२०८२), काठमाडौं । नेकपा (एमाले)ले प्रतिनिधिसभा निर्वाचन–२०८२ को घोषणा पत्र सार्वजनिक गरेको छ । 
+            ‘एमालेले बनाउँछ !’ मूल उद्देश्यसहित तत्काल गर्ने ११ काम, पाँच आधारभूत घोषणा र समृद्धिका २५ स्तम्भलाई नीतिगत प्राथमिकताका साथ घोषणा पत्र सार्वजनिक गरिएको छ ।           </p>
+
+          <div class="mt-4 text-red-700 font-semibold text-sm">
+            Read More →
+          </div>
+        </div>
+
+      </a>
+      <!-- ===== END CARD ===== -->
+
+
+      <!-- ===== NEWS CARD 2 ===== -->
+      <a href="https://www.cpnuml.org/news/3846" target="_blank"
+         class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+        <img src="news2.jpg"
+             class="w-full h-52 object-cover">
+
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">February 20, 2026</p>
+
+          <h3 class="text-xl font-bold text-red-900 mb-3">
+            दशबर्षमा सडक कालोपत्रे लगायत देशमा असाधारण विकास भएको छः अध्यक्ष ओली
+          </h3>
+
+          <p class="text-gray-600 text-sm">
+           ६ माघ (२०८२), दमक । नेकपा (एमाले)का अध्यक्ष एवं पूर्वप्रधानमन्त्री केपी शर्मा ओलीले पहिले–पहिले झापा– ५ मा  कालो पत्रे सडक हेर्न राजमार्ग आउनु पर्थ्यो, अहिले कालोपत्रे नभएको सडक खोज्नुपर्ने अवस्थामा पुर्याइएको बताउनुभएको छ ।
+          </p>
+
+          <div class="mt-4 text-red-700 font-semibold text-sm">
+            Read More →
+          </div>
+        </div>
+
+      </a>
+      <!-- ===== END CARD ===== -->
+
+
+      <!-- ===== NEWS CARD 3 ===== -->
+      <a href="https://www.cpnuml.org/news/3844" target="_blank"
+         class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+        <img src="new3.jpg"
+             class="w-full h-52 object-cover">
+
+        <div class="p-6">
+          <p class="text-sm text-gray-500 mb-2">February 20, 2026</p>
+
+          <h3 class="text-xl font-bold text-red-900 mb-3">
+            एमाले देश बनाउने शक्ति होः नेता पोखरेल
+          </h3>
+
+          <p class="text-gray-600 text-sm">
+            ६ माघ (२०८२), काठमाडौं । नेकपा (एमाले)का नेता तथा प्रतिनिधि सभा निर्वाचनमा काठमाडौं क्षेत्र नम्बर ५ का उम्मेदवार ईश्वर पोखरेलले चुनावी घरदैलो तथा मतदाता भेटघाट कार्यक्रमलाई तीब्र पार्नुभएको छ ।          </p>
+
+          <div class="mt-4 text-red-700 font-semibold text-sm">
+            Read More →
+          </div>
+        </div>
+
+      </a>
+      <!-- ===== END CARD ===== -->
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= END NEWS SECTION ================= -->
+
+  <!-- footer -->
+
+
+ <!-- FOOTER START -->
+<footer class="bg-red-950 text-white shadow-2xl font-serif">
+
+  <!-- Top Section -->
+  <div class="pt-10 pb-6">
+    <h1 class="text-center text-3xl font-bold">नेकपा (एमाले) Since 1991</h1>
+    <div class="flex justify-center mt-4">
+      <hr class="w-72 border-red-700">
+    </div>
+
+    <!-- Highlights -->
+    <div class="flex flex-col md:flex-row justify-center gap-10 mt-8 px-6">
+
+      <!-- Reliable -->
+      <div class="flex items-start space-x-4 max-w-sm">
+        <img src="reliable governance.png" class="rounded-full w-16 h-16" alt="">
+        <div>
+          <h2 class="font-semibold text-lg">Reliable Leadership</h2>
+          <p class="text-white/70 text-sm">
+            Dedicated to national stability, transparency, and long-term development.
+          </p>
+        </div>
+      </div>
+
+      <!-- Secure -->
+      <div class="flex items-start space-x-4 max-w-sm">
+        <img src="strong governance.png" class="rounded-full w-16 h-16" alt="">
+        <div>
+          <h2 class="font-semibold text-lg">Strong Governance</h2>
+          <p class="text-white/70 text-sm">
+            Committed to institutional strengthening and accountable governance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Affordable -->
+      <div class="flex items-start space-x-4 max-w-sm">
+        <img src="development.webp" class="rounded-full w-16 h-16" alt="">
+        <div>
+          <h2 class="font-semibold text-lg">Development Focused</h2>
+          <p class="text-white/70 text-sm">
+            Prioritizing infrastructure, economic growth, and social welfare.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Middle Section -->
+  <div class="bg-white text-gray-800 py-10">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Help -->
+      <div>
+        <h2 class="font-bold text-lg mb-4">Need Help?</h2>
+        <ul class="space-y-2 text-sm">
+          <a href="https://www.facebook.com/share/1DajzrHnKa/"><li class="hover:text-red-700 cursor-pointer">Contact Us</li></a>
+          <a href="https://public-survey-jhapa.netlify.app/"><li class="hover:text-red-700 cursor-pointer">FAQs</li></a>
+        </ul>
+      </div>
+
+      <!-- Focus area -->
+      <div>
+      <h3 class="text-xl font-semibold mb-4">Our Focus</h3>
+      <ul class="space-y-2 /80">
+        <li>Infrastructure Development</li>
+        <li>Energy Security</li>
+        <li>National Sovereignty</li>
+        <li>Strong Diplomacy</li>
+        <li>Youth & Employment</li>
+      </ul>
+    </div>
+
+      <!-- Social -->
+      <div>
+        <h2 class="font-bold text-lg mb-4">Social Links</h2>
+        <ul class="space-y-2">
+          <a href="https://www.facebook.com/share/1DajzrHnKa/"><li class="hover:text-red-700 cursor-pointer">Facebook</li></a>
+          <a href="https://www.instagram.com/kp.sharma.oli?igsh=MWQzZXR0dTE4aTQ3dg=="><li class="hover:text-red-700 cursor-pointer">Instagram</li></a>
+          <a href="https://x.com/kpsharmaoli"><li class="hover:text-red-700 cursor-pointer">Twitter</li></a>
+          <a href="https://whatsapp.com/channel/0029VajtKWzIN9iwDVP9PM3D"><li class="hover:text-red-700 cursor-pointer">Whatsapp</li></a>
+          
+          <!-- <li class="hover:text-red-700 cursor-pointer">Instagram</li>
+          <li class="hover:text-red-700 cursor-pointer">Twitter</li>
+          <li class="hover:text-red-700 cursor-pointer">YouTube</li> -->
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h2 class="font-bold text-lg mb-4">Stay Updated</h2>
+        <p class="text-sm text-gray-600">
+          Stay tune to receive latest updates, announcements, and development news.
+        </p>
+
+        <div class="flex mt-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="w-full px-4 py-2 border border-gray-400 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-700">
+          <a href="https://public-survey-jhapa.netlify.app/"><button class="bg-red-800 text-white p-4 rounded-r-lg hover:bg-red-700 transition">Any Queries?</button>
+          </a>    
+            </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="bg-red-900 text-center py-4 text-sm">
+    <p>© 2026 CPN-UML . All rights reserved.</p>
+  </div>
+
+</footer>
+<!-- FOOTER END -->
+
+<script>
+  function toggleText() {
+    const text = document.getElementById("moreText");
+
+    if (text.classList.contains("hidden")) {
+      text.classList.remove("hidden");
+    } else {
+      text.classList.add("hidden");
+    }
+  }
+</script>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Toggle menu open/close
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent bubbling
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
